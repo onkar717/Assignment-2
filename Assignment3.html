@@ -1,16 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-top: 10px;
+        height: 60px;
+    }
+
+    nav li {
+        margin-left: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 19px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    nav li:hover {
+        color: rgb(255, 116, 3);
+    }
+
+    .main {
+        gap: 110px;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .btn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 7px 18px;
+        background-color: #fff;
+    }
+
+    .btn:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    img {
+        width: 120px;
+        height: 48px;
+    }
+
+    .tech {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(255, 0, 123);
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        border: 0;
+        outline: 0;
+        padding: 3px 4px;
+        border-radius: 3px;
+    }
+
+    .Login {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(138, 134, 134);
+        position: absolute;
+        display: none;
+    }
+
+    .box {
+        height: 400px;
+        width: 27%;
+        position: absolute;
+        left: 60%;
+        top: 0.3%;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .close {
+        background-color: #fff;
+        border: 0;
+        outline: 0;
+        margin: 5px;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .close:hover {
+        cursor: pointer;
+        color: red;
+    }
+
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    form {
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+
+    .submit {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .submit:hover {
+        background-color: #0056b3;
+    }
 </style>
+
 <body>
+    <div class="main">
+        <img src="/Images/logo.png" alt="">
+        <nav>
+            <li>Indias best <button class="tech">B.Tech CSE</button></li>
+            <li>Program</li>
+            <li>Student Ambassdor</li>
+            <li>Events</li>
+            <li>Community</li>
+            <li><button class="btn" id="Signin">Sign in</button></li>
+            <li><button class="btn" id="signup">Sign up</button></li>
+        </nav>
+        <div class="btn">
+        </div>
+    </div>
+    <div class="Login" id="loging">
+        <div class="box">
+            <button class="close" id="closed">X</button>
+<div class="container">
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" required>
+
+                <label for="Number">Number:</label>
+                <input type="number" id="Number" name="Number" required>
+
+
+                <button class="submit" id="Submited" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
     <script>
-        
+        document.getElementById('Signin').addEventListener('click', web);
+        function web() {
+            document.getElementById('loging').style.display = "block"
+        }
+
+
+        document.getElementById('closed').addEventListener('click', Dev)
+        function Dev() {
+            document.getElementById('loging').style.display = "none"
+        }
+
+        document.getElementById('Submited').addEventListener('submit', function(Sub) {
+        Sub.preventDefault();
+    })
     </script>
 </body>
+
 </html>
