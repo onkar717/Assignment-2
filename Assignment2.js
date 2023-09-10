@@ -1,3 +1,4 @@
+// Question.1 = Demonstrate the use of Switch Case 
 let dayNumber = 9;
 let dayType;
 
@@ -16,5 +17,19 @@ switch (dayNumber) {
   default:
     dayType = "Invalid day number";
 }
-
 console.log(`Day ${dayNumber} is a ${dayType}.`);
+
+
+// Question.2 = Take 5 Subject marks the percentage and Provide grade based on that
+// Marks out of 100
+
+let English = 85;
+let Hindi = 90;
+let Science = 95;
+let Maths = 99;
+let SocialScience = 98;
+const Total_Marks = English + Hindi + Science + Maths + SocialScience;
+const Out_of = 500;
+
+
+console.log(Total_Marks*100/Out_of);
