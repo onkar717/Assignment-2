@@ -31,5 +31,4 @@ let SocialScience = 98;
 const Total_Marks = English + Hindi + Science + Maths + SocialScience;
 const Out_of = 500;
 
-
 console.log(`The Total Marks Gain By Student ${Total_Marks} Out of ${Out_of} and Total Percentage is ${Total_Marks*100/500}`);
