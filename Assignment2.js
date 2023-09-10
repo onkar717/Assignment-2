@@ -32,4 +32,4 @@ const Total_Marks = English + Hindi + Science + Maths + SocialScience;
 const Out_of = 500;
 
 
-console.log(Total_Marks*100/Out_of);
+console.log(`The Total Marks Gain By Student ${Total_Marks} Out of ${Out_of} and Total Percentage is ${Total_Marks*100/500}`);
